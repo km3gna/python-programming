@@ -1,0 +1,56 @@
+# Esther G Kim (author)
+# Bottles of Beer on the Wall Song
+
+import sys
+
+
+def BottleSong():
+    for b in range(99, 0, -1):
+        if b > 2:
+            print(f"{b} bottles of beer on the wall!\n{b} bottles of beer!\nTake one down\nAnd pass it around\n{b-1} bottles of beer on the wall!\n")
+        elif b == 2:
+            print(f"{b} bottles of beer on the wall!\n{b} bottles of beer!\nTake one down\nAnd pass it around\n{b-1} bottle of beer on the wall!\n")
+        elif b == 1:
+            print("1 bottle of beer on the wall!\n1 bottle of beer!\nTake one down\nAnd pass it around\nNo more bottles of beer on the wall!\n")
+
+
+# print(sys.argv)
+# n = sys.argv[1] if len(sys.argv) > 1 else BottleSong()
+# print(n)
+
+while True:
+    try:
+        if sys.argv[1:]:
+            n = int(sys.argv[1])
+            for i in range (n,-1, -1):
+                if i == 0:
+                    print("No more bottles of beer on the wall...\nNo more bottles of beer...\nNothing to take down\nAnd pass around\nI guess it's time to go home. \U0001F622 \U0001F62D")
+                    break
+                elif i == 1:
+                    print("1 bottle of beer on the wall!\n1 bottle of beer!\nTake one down\nAnd pass it around\nNo more bottles of beer on the wall!\n")
+                    i -= 1
+                elif i == 2:
+                    print(f"{n} bottles of beer on the wall!\n{n} bottles of beer!\nTake one down\nAnd pass it around\n{n-1} bottle of beer on the wall!\n")
+                    i -= 1
+                else:
+                    print(f"{n} bottles of beer on the wall!\n{n} bottles of beer!\nTake one down\nAnd pass it around\n{n-1} bottles of beer on the wall!\n")
+                    i -= 1
+        else:
+            sys.exit()
+    except Exception:
+        print("ERROR: Invalid input. Only integers greater than zero allowed.")
+        continue
+    finally:
+        break
+
+print("Since that didn't work out.")
+song = input("Would you like to see the original lyrics (99 bottles)? (Y/N)\n")
+
+if song == "Y" or song == "y":
+    print(BottleSong())
+    print()
+    print("Thank you")
+elif song == "N" or song == "n":
+    print("That's too bad. It's a great song.")
+else:
+    print("Good-bye")
