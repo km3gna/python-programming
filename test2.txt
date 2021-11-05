@@ -1,0 +1,8 @@
+Joe Desktop 500
+Joe Laptop 300
+Mary Desktop 600
+Mary Laptop 500
+Beth Laptop 800
+Beth Tablet 500
+Mark Laptop 1000
+Susan Tablet 700
