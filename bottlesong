@@ -1,0 +1,10 @@
+def BottleSong():
+    for b in range(99, 0, -1):
+        if b > 2:
+            print(f"{b} bottles of beer on the wall!\n{b} bottles of beer!\nTake one down\nAnd pass it around\n{b-1} bottles of beer on the wall!\n")
+        elif b == 2:
+            print(f"{b} bottles of beer on the wall!\n{b} bottles of beer!\nTake one down\nAnd pass it around\n{b-1} bottle of beer on the wall!\n")
+        elif b == 1:
+            print("1 bottle of beer on the wall!\n1 bottle of beer!\nTake one down\nAnd pass it around\nNo more bottles of beer on the wall!\n")
+
+BottleSong()
